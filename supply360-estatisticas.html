@@ -1,206 +1,279 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestão | supply360 | Tech Master</title>
-    <link rel="icon" href="img/supply360-favicon.ico" type="image/x-icon" sizes="16x16">
-    <link rel="stylesheet" href="css/supply360.css">
+    <link
+      rel="icon"
+      href="img/supply360-favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="css/supply360.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-</head>
+  </head>
 
-<body class="flex flex-col min-h-screen bg-orchidBlossom font-poppins">
-    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" type="button"
-        class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-blazeOrange rounded-lg lg:hidden">
-        <span class="sr-only">Abrir</span>
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-            </path>
-        </svg>
+  <body class="flex flex-col min-h-screen bg-orchidBlossom font-poppins">
+    <button
+      data-drawer-target="default-sidebar"
+      data-drawer-toggle="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-blazeOrange rounded-lg lg:hidden"
+    >
+      <span class="sr-only">Abrir</span>
+      <svg
+        class="w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
     </button>
-    <aside id="default-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-white">
-        <div class="overflow-y-auto py-5 px-3 h-full border-r border-white">
-            <a href="supply360-index.html"
-                class="flex items-center uppercase tracking-supply360 p-2 text-2xl text-blazeOrange group">
-                <img src="img/supply360-favicon.ico" alt="Favicon" class="h-16 w-16 mr-2">
-                <span class="ml-1 font-extrabold">supply360</span>
-            </a>
-            <ul class="pt-5 mt-5 space-y-2 border-t border-blazeOrange">
-                <li>
-                    <a href="supply360-index.html"
-                        class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-6 h-6 text-blazeOrange transition duration-75">
-                            <path
-                                d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z">
-                            </path>
-                            <path
-                                d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z">
-                            </path>
-                        </svg>
-                        <span class="ml-3">Início</span>
-                    </a>
+    <aside
+      id="default-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-white"
+    >
+      <div class="overflow-y-auto py-5 px-3 h-full border-r border-white">
+        <a
+          href="supply360-index.html"
+          class="flex items-center uppercase tracking-supply360 p-2 text-2xl text-blazeOrange group"
+        >
+          <img
+            src="img/supply360-favicon.ico"
+            alt="Favicon"
+            class="h-16 w-16 mr-2"
+          />
+          <span class="ml-1 font-extrabold">supply360</span>
+        </a>
+        <ul class="pt-5 mt-5 space-y-2 border-t border-blazeOrange">
+          <li>
+            <a
+              href="supply360-index.html"
+              class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-blazeOrange transition duration-75"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
 
-                </li>
-                <li>
-                    <a href="supply360-produto.html"
-                        class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-6 h-6 text-blazeOrange transition duration-75">
-                            <path
-                                d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z">
-                            </path>
-                            <path
-                                d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z">
-                            </path>
-                        </svg>
-                        <span class="ml-3">Produtos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="supply360-pedido.html"
-                        class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-6 h-6 text-blazeOrange transition duration-75">
-                            <path
-                                d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z">
-                            </path>
-                            <path
-                                d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z">
-                            </path>
-                        </svg>
-                        <span class="ml-3">Pedidos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="supply360-estatisticas.html"
-                        class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-6 h-6 text-blazeOrange transition duration-75">
-                            <path
-                                d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z">
-                            </path>
-                            <path
-                                d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z">
-                            </path>
-                        </svg>
-                        <span class="ml-3">Estatísticas</span>
-                    </a>
-                </li>
-                <!-- Novo link para Clientes -->
-                <li>
-                    <a href="supply360-cliente.html"
-                        class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-6 h-6 text-blazeOrange transition duration-75">
-                            <path
-                                d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z">
-                            </path>
-                            <path
-                                d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z">
-                            </path>
-                        </svg>
-                        <span class="ml-3">Clientes</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+              <span class="ml-3">Início</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="supply360-produto.html"
+              class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-blazeOrange transition duration-75"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+                />
+              </svg>
+
+              <span class="ml-3">Produtos</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="supply360-pedido.html"
+              class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-blazeOrange transition duration-75"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
+                />
+              </svg>
+
+              <span class="ml-3">Pedidos</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="supply360-estatisticas.html"
+              class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-blazeOrange transition duration-75"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"
+                />
+              </svg>
+
+              <span class="ml-3">Estatisticas</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
-    <div id="content-wrapper" class="flex-1 7 ml-0 lg:ml-64 transition-margin duration-300 ease-in-out">
-        <main class="flex-1 p-6">
-            <div class="max-w-7xl mx-auto">
-                <h1 class="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
-                <!-- Interaction Section -->
-                <div class="mb-6">
-                    <label for="queryInput" class="block mb-2 text-sm font-medium text-gray-900">Digite a sua pergunta:</label>
-                    <input type="text" id="queryInput" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-12 p-2.5 mb-4" placeholder="Exemplo: Existe o produto X?">
-                    <button id="checkButton" class=" bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Verificar</button>
-                </div>
-                <!-- Card Section -->
-                <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                    <!-- Sales Chart -->
-                    <div class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover">
-                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Vendas</h2>
-                        <canvas id="salesChart"></canvas>
-                    </div>
-                    <!-- Orders Chart -->
-                    <div class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover">
-                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Pedidos</h2>
-                        <canvas id="ordersChart"></canvas>
-                    </div>
-                    <!-- Stock Chart -->
-                    <div class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover">
-                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Estoque</h2>
-                        <canvas id="stockChart"></canvas>
-                    </div>
-                    <!-- Sales Target Chart -->
-                    <div class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover">
-                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Meta de Vendas</h2>
-                        <canvas id="salesTargetChart"></canvas>
-                    </div>
-                    <!-- Forecast Chart -->
-                    
-                </div>
+    <div
+      id="content-wrapper"
+      class="flex-1 7 ml-0 lg:ml-64 transition-margin duration-300 ease-in-out"
+    >
+      <main class="flex-1 p-6">
+        <div class="max-w-7xl mx-auto">
+          <h1 class="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
+          <!-- Interaction Section -->
+          <div class="mb-6">
+            <label
+              for="queryInput"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Digite a sua pergunta:</label
+            >
+            <input
+              type="text"
+              id="queryInput"
+              class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-12 p-2.5 mb-4"
+              placeholder="Exemplo: Existe o produto X?"
+            />
+            <button
+              id="checkButton"
+              class="bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            >
+              Verificar
+            </button>
+          </div>
+          <!-- Card Section -->
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Sales Chart -->
+            <div
+              class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">Vendas</h2>
+              <canvas id="salesChart"></canvas>
             </div>
-        </main>
-        <style>
-            .chart-container {
-                max-width: 500px;
-            }
-            .chart-container canvas {
-                width: 100%;
-                height: auto;
-            }
-        </style>
-        <footer class="bg-white rounded-lg shadow m-4">
-            <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-                <span class="text-sm text-blazeOrange sm:text-center">Copyright &copy; 2024 | supply360
-                </span>
-                <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-blazeOrange sm:mt-0 modal-hover">
-                    <li>
-                        <a href="#sobre" class="hover:underline me-4 md:me-6">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/clothessupply360/"
-                            class="hover:underline">Instagram</a>
-                    </li>
-                </ul>
+            <!-- Orders Chart -->
+            <div
+              class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">Pedidos</h2>
+              <canvas id="ordersChart"></canvas>
             </div>
-        </footer>
+            <!-- Stock Chart -->
+            <div
+              class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">Estoque</h2>
+              <canvas id="stockChart"></canvas>
+            </div>
+            <!-- Sales Target Chart -->
+            <div
+              class="bg-white p-2 rounded-lg shadow-lg border border-gray-200 chart-container modal-hover"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                Meta de Vendas
+              </h2>
+              <canvas id="salesTargetChart"></canvas>
+            </div>
+            <!-- Forecast Chart -->
+          </div>
+        </div>
+      </main>
+      <style>
+        .chart-container {
+          max-width: 500px;
+        }
+        .chart-container canvas {
+          width: 100%;
+          height: auto;
+        }
+      </style>
+      <footer class="bg-white rounded-lg shadow m-4">
+        <div
+          class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+        >
+          <span class="text-sm text-blazeOrange sm:text-center"
+            >Copyright &copy; 2024 | supply360
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm font-medium text-blazeOrange sm:mt-0 modal-hover"
+          >
+            <li>
+              <a href="#sobre" class="hover:underline me-4 md:me-6">Sobre</a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/clothessupply360/"
+                class="hover:underline"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
     <script src="js/supply360.js"></script>
     <script>
-        // Dados de exemplo
-        const produtos = ["produto1", "produto2", "produto3"];
-        const clientes = ["cliente1", "cliente2", "cliente3"];
+      // Dados de exemplo
+      const produtos = ["produto1", "produto2", "produto3"];
+      const clientes = ["cliente1", "cliente2", "cliente3"];
 
-        document.getElementById('checkButton').addEventListener('click', () => {
-            const query = document.getElementById('queryInput').value.toLowerCase();
-            if (query.includes('produto')) {
-                const produtoNome = query.split('produto')[1].trim();
-                if (produtos.includes(produtoNome)) {
-                    alert('Produto encontrado!');
-                    window.location.href = 'supply360-produto.html';
-                } else {
-                    alert('Produto não encontrado.');
-                }
-            } else if (query.includes('cliente')) {
-                const clienteNome = query.split('cliente')[1].trim();
-                if (clientes.includes(clienteNome)) {
-                    alert('Cliente encontrado!');
-                    window.location.href = 'supply360-cliente.html';
-                } else {
-                    alert('Cliente não encontrado.');
-                }
-            } else {
-                alert('Por favor, faça uma pergunta válida sobre produto ou cliente.');
-            }
-        });
+      document.getElementById("checkButton").addEventListener("click", () => {
+        const query = document.getElementById("queryInput").value.toLowerCase();
+        if (query.includes("produto")) {
+          const produtoNome = query.split("produto")[1].trim();
+          if (produtos.includes(produtoNome)) {
+            alert("Produto encontrado!");
+            window.location.href = "supply360-produto.html";
+          } else {
+            alert("Produto não encontrado.");
+          }
+        } else if (query.includes("cliente")) {
+          const clienteNome = query.split("cliente")[1].trim();
+          if (clientes.includes(clienteNome)) {
+            alert("Cliente encontrado!");
+            window.location.href = "supply360-cliente.html";
+          } else {
+            alert("Cliente não encontrado.");
+          }
+        } else {
+          alert(
+            "Por favor, faça uma pergunta válida sobre produto ou cliente."
+          );
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
