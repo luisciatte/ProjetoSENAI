@@ -121,6 +121,19 @@
                 <span class="ml-3">Estatisticas</span>
               </a>
             </li>
+            <li>
+                <a
+                  href="supply360-estoque.html"
+                  class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blazeOrange transition duration-75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+                
+    
+                  <span class="ml-3">Estoque</span>
+                </a>
+              </li>
           </ul>
         
     </div>
@@ -206,7 +219,7 @@
                                         <th scope="col" class="px-4 py-4">Cliente</th>
                                         <th scope="col" class="px-4 py-3">ID</th>
                                         <th scope="col" class="px-4 py-3">Produto</th>
-                                        <th scope="col" class="px-4 py-3">Quantidade</th>
+                                        
                                         <th scope="col" class="px-4 py-3"></th>
                                     </tr>
                                 </thead>
@@ -217,7 +230,7 @@
                                         </th>
                                         <td class="px-4 py-3">ID</td>
                                         <td class="px-4 py-3">Produto</td>
-                                        <td class="px-4 py-3 max-w-[12rem] truncate">Quantidade</td>
+                                        
 
                                         <td class="px-4 py-3 relative">
                                             <button id="dropdown-button" data-dropdown-toggle="dropdown"
@@ -327,11 +340,7 @@
                                     <option value="produto3">Produto 3</option>
                                 </select>
 
-                                <label for="quantidade"
-                                    class="block mb-2 text-sm font-medium text-blazeOrange">Quantidade</label>
-                                <input type="number" name="quantidade[]"
-                                    class="quantidade-input bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Digite a quantidade" step="0.01" required="">
+                               
 
                                 <button type="button"
                                     class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
@@ -360,7 +369,7 @@
                 class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
                 <div class="relative p-4 w-full max-w-2xl bg-white rounded-lg shadow-lg modal-content">
                     <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b border-blazeOrange">
-                        <h3 class="text-lg font-semibold text-blazeOrange">Adicionar pedido</h3>
+                        <h3 class="text-lg font-semibold text-blazeOrange">Editar pedido</h3>
                         <button type="button"
                             class="text-blazeOrange bg-transparent hover:bg-blazeOrange hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
                             data-modal-target="createProductModal" data-modal-toggle="createProductModal">
@@ -403,12 +412,6 @@
                                     <option value="produto2">Produto 2</option>
                                     <option value="produto3">Produto 3</option>
                                 </select>
-
-                                <label for="quantidade"
-                                    class="block mb-2 text-sm font-medium text-blazeOrange">Quantidade</label>
-                                <input type="number" name="quantidade[]"
-                                    class="quantidade-input bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Digite a quantidade" step="0.01" required="">
 
                                 <button type="button"
                                     class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
@@ -460,13 +463,9 @@
                     </div>
                 </div>
                 <dl>
-                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Descrição</dt>
-                    <dd class="mb-4 font-light text-blazeOrange sm:mb-5">Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Animi optio nisi possimus, praesentium doloribus iusto?</dd>
-                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Quantidade</dt>
-                    <dd class="mb-4 font-light text-blazeOrange sm:mb-5">Lorem</dd>
-                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Qualidade</dt>
-                    <dd class="mb-4 font-light text-blazeOrange sm:mb-5">Lorem</dd>
+                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Produto</dt>
+        
+                    
                 </dl>
             </div>
         </div>

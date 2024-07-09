@@ -81,9 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
               <option value="produto3">Produto 3</option>
           </select>
           
-          <label for="quantidade" class="block mb-2 text-sm font-medium text-blazeOrange">Quantidade</label>
-          <input type="number" name="quantidade[]" class="quantidade-input bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5" placeholder="Digite a quantidade" step="0.01" required>
-          
           <button type="button" class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
       `;
       produtosContainer.appendChild(newItem);
@@ -105,10 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <option value="produto2">Produto 2</option>
             <option value="produto3">Produto 3</option>
         </select>
-        
-        <label for="quantidade" class="block mb-2 text-sm font-medium text-blazeOrange">Quantidade</label>
-        <input type="number" name="quantidade[]" class="quantidade-input bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5" placeholder="Digite a quantidade" step="0.01" required>
-        
+      
         <button type="button" class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
     `;
     produtosContainer.appendChild(newItem);
@@ -122,8 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const addProductBtn = document.getElementById('add-product-btn');
   addProductBtn.addEventListener('click', addProduct);
 
-  const updateProductBtn = document.getElementById('update-product-btn');
-  updateProductBtn.addEventListener('click', updateProduct);
 
   // Attach remove functionality to existing items
   const produtosContainer = document.getElementById('produtos-container');

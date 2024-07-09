@@ -1290,7 +1290,7 @@ video {
 }
 
 
-@media (min-width: ) {
+@media (min-width: 1px) {
   .lg\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -1514,4 +1514,11 @@ textarea {
 .dropdown-button:hover {
   background-color: #145B91; /* Cor de fundo ao passar o mouse */
   color: #fff; /* Cor do texto ao passar o mouse */
+}
+.chart-container {
+  max-width: 500px;
+}
+.chart-container canvas {
+  width: 100%;
+  height: auto;
 }

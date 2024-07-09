@@ -177,7 +177,7 @@
                                         <path clip-rule="evenodd" fill-rule="evenodd"
                                             d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                                     </svg>
-                                    Adicionar produto
+                                    Adicionar quantidade de produto
                                 </button>
                             </div>
 
@@ -216,19 +216,18 @@
                             <table class="w-full text-sm text-left text-blazeOrange">
                                 <thead class="text-xs text-blazeOrange uppercase bg-white">
                                     <tr>
-                                        <th scope="col" class="px-4 py-4">Nome</th>
                                         <th scope="col" class="px-4 py-3">ID</th>
-                                        <th scope="col" class="px-4 py-3">Descrição</th>
+                                        <th scope="col" class="px-4 py-3">Quantidade</th>
                                         <th scope="col" class="px-4 py-3"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="border-b">
                                         <th scope="row"
-                                            class="px-4 py-3 font-medium text-blazeOrange whitespace-nowrap">Nome
+                                            class="px-4 py-3 font-medium text-blazeOrange whitespace-nowrap">ID
                                         </th>
-                                        <td class="px-4 py-3">ID</td>
-                                        <td class="px-4 py-3">Descrição</td>
+                                        <td class="px-4 py-3">Quantidade</td>
+                                        
 
                                         <td class="px-4 py-3 relative">
                                             <button id="dropdown-button" data-dropdown-toggle="dropdown"
@@ -294,7 +293,7 @@
             class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
                 <div class="relative p-4 w-full max-w-2xl bg-white rounded-lg shadow-lg modal-content">
                     <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b border-blazeOrange">
-                        <h3 class="text-lg font-semibold text-blazeOrange">Adicionar produto</h3>
+                        <h3 class="text-lg font-semibold text-blazeOrange">Adicionar quantidade de produto</h3>
                         <button type="button"
                             class="text-blazeOrange bg-transparent hover:bg-blazeOrange hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
                             data-modal-target="createProductModal" data-modal-toggle="createProductModal">
@@ -309,13 +308,7 @@
                     </div>
                     <form action="#" class="px-6 py-4">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2">
-                            <div>
-                                <label for="name" class="block mb-2 text-sm font-medium text-blazeOrange">Nome do
-                                    Produto</label>
-                                <input type="text" name="name" id="name"
-                                    class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Digite o Nome do Produto" required="">
-                            </div>
+                            
                             <div>
                                 <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">ID</label>
                                 <input type="number" name="id" id="id"
@@ -323,11 +316,12 @@
                                     placeholder="Digite o ID do produto" required="">
                             </div>
                             <div>
-                                <label for="descricao" class="block mb-2 text-sm font-medium text-blazeOrange">Descrição</label>
-                                <input type="text" name="name" id="name"
+                                <label for="quantidade" class="block mb-2 text-sm font-medium text-blazeOrange">Quantidade</label>
+                                <input type="number" name="quantidade" id="quantidade"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Descrição" required="">
+                                    placeholder="Digite a quantdade a ser adicionada" required="">
                             </div>
+                            
                         </div>
                       
                     </form>
@@ -349,7 +343,7 @@
                 class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
                 <div class="relative p-4 w-full max-w-2xl bg-white rounded-lg shadow-lg modal-content">
                     <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b border-blazeOrange">
-                        <h3 class="text-lg font-semibold text-blazeOrange">Editar produto</h3>
+                        <h3 class="text-lg font-semibold text-blazeOrange">Editar quantidade produto</h3>
                         <button type="button"
                             class="text-blazeOrange bg-transparent hover:bg-blazeOrange hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
                             data-modal-target="createProductModal" data-modal-toggle="createProductModal">
@@ -364,24 +358,12 @@
                     </div>
                     <form action="#" class="px-6 py-4">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                           
                             <div>
-                                <label for="name" class="block mb-2 text-sm font-medium text-blazeOrange">Nome do
-                                    Produto</label>
-                                <input type="text" name="name" id="name"
+                                <label for="quantdade" class="block mb-2 text-sm font-medium text-blazeOrange">Quantidade</label>
+                                <input type="number" name="quantidade" id="quantidade"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Digite o Nome do Produto" required="">
-                            </div>
-                            <div>
-                                <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">ID</label>
-                                <input type="number" name="id" id="id"
-                                    class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Digite o ID do produto" required="">
-                            </div>
-                            <div>
-                                <label for="descricao" class="block mb-2 text-sm font-medium text-blazeOrange">Descrição</label>
-                                <input type="text" name="name" id="name"
-                                    class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Descrição" required="">
+                                    placeholder="Editar a quantidade do produto" required="">
                             </div>
                         </div>
                       
@@ -428,10 +410,11 @@
                 </div>
                 <dl>
                     <dt class="mb-2 font-semibold leading-none text-blazeOrange">Nome</dt>
-                    <dd class="mb-4 font-light text-blazeOrange sm:mb-5">Baby Fabio</dd>
+                   
                     <dt class="mb-2 font-semibold leading-none text-blazeOrange">Descrição</dt>
-                    <dd class="mb-4 font-light text-blazeOrange sm:mb-5">Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Animi optio nisi possimus, praesentium doloribus iusto?</dd>
+                    
+                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Quantidade</dt>
+                    
                     
                     
                 </dl>
