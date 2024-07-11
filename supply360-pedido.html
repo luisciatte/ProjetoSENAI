@@ -10,6 +10,7 @@
 </head>
 
 <body class="flex flex-col min-h-screen bg-orchidBlossom font-poppins">
+        <!-- Botão para abrir o sidebar -->
     <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" type="button"
         class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-blazeOrange rounded-lg">
         <span class="sr-only">Abrir</span>
@@ -19,7 +20,7 @@
             </path>
         </svg>
     </button>
-
+        <!-- Sidebar -->
     <aside id="default-sidebar"
     class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-white">
     <div class="overflow-y-auto py-5 px-3 h-full border-r border-white">
@@ -312,39 +313,38 @@
                     <form action="#" class="px-6 py-4">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2">
                             <div>
-                                <label for="name" class="block mb-2 text-sm font-medium text-blazeOrange">Nome do
-                                    Cliente</label>
-                                <input type="text" name="name" id="name"
+                                <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">ID Cliente</label>
+                                <input type="number" name="id_cliente" id="id_cliente"
                                     class="bg-white border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    placeholder="Digite o nome do cliente" required="">
+                                    placeholder="Digite o ID do cliente" required="">
                             </div>
                             <div>
-                                <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">ID</label>
-                                <input type="number" name="id" id="id"
+                                <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">ID Pedido</label>
+                                <input type="number" name="id_pedido" id="id_pedido"
                                     class="bg-white border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Digite o ID do pedido" required="">
+                            </div>
+                            <div>
+                                <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">Data do pedido</label>
+                                <input type="date" name="data_pedido" id="data_pedido"
+                                    class="bg-white border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                    placeholder="Digite o data do pedido" required="">
                             </div>
                         </div>
                         <!--ADICIONAR PRODUTO-->
                         <div id="produtos-container" class="space-y-4">
                             <div class="flex flex-col space-y-4 item">
-                                <label for="produto"
-                                    class="block mb-2 text-sm font-medium text-blazeOrange">Produtos</label>
-                                <select name="produto[]"
-                                    class="produto-select bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
-                                    required="">
-                                    <option value="" disabled="" selected="">Escolha um produto</option>
-                                    <!-- Aqui você adicionaria as opções de produtos dinamicamente -->
-                                    <option value="produto1">Produto 1</option>
-                                    <option value="produto2">Produto 2</option>
-                                    <option value="produto3">Produto 3</option>
-                                </select>
-
-                               
-
-                                <button type="button"
-                                    class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
+                                <!-- Rótulo para o campo de entrada do produto -->
+                                <label for="produto" class="block mb-2 text-sm font-medium text-blazeOrange">Produtos</label>
+                                <!-- Campo de entrada de texto para inserir o número do produto -->
+                                <input type="text" name="produto[]" 
+                                       class="produto-input bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5" 
+                                       placeholder="Digite o ID do produto" required="">
+                                
+                                <!-- Botão para remover o item -->
+                                <button type="button" class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
                             </div>
+                            
                         </div>
 
                         <button type="button" id="add-product-btn"

@@ -73,15 +73,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const newItem = document.createElement('div');
       newItem.className = 'flex flex-col space-y-4 item';
       newItem.innerHTML = `
-          <label for="produto" class="block mb-2 text-sm font-medium text-blazeOrange">Produtos</label>
-          <select name="produto[]" class="produto-select bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5" required>
-              <option value="" disabled selected>Escolha um produto</option>
-              <option value="produto1">Produto 1</option>
-              <option value="produto2">Produto 2</option>
-              <option value="produto3">Produto 3</option>
-          </select>
-          
-          <button type="button" class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
+      <label for="produto" class="block mb-2 text-sm font-medium text-blazeOrange">Produtos</label>
+      <!-- Campo de entrada de texto para inserir o número do produto -->
+      <input type="text" name="produto[]" 
+             class="produto-input bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5" 
+             placeholder="Digite o ID do produto" required="">
+      
+      <!-- Botão para remover o item -->
+      <button type="button" class="remove-btn bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">Remover</button>
       `;
       produtosContainer.appendChild(newItem);
 

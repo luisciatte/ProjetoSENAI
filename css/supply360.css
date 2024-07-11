@@ -1290,7 +1290,7 @@ video {
 }
 
 
-@media (min-width: 5000px) {
+@media (min-width:5000px) {
   .lg\:mb-16 {
     margin-bottom: 4rem;
   }
