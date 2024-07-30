@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Titulo da página -->
+
+    <title>Início |  Tech Master</title>
+
+    <!-- Icon da TechMaster -->
+    <link
+      rel="icon"
+      href="img/techmaster-logo.png"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="css/supply360.css" />
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-orchidBlossom font-poppins">
+    <button
+      data-drawer-target="default-sidebar"
+      data-drawer-toggle="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-blazeOrange rounded-lg lg:hidden"
+    >
+      <span class="sr-only">Abrir</span>
+      <svg
+        class="w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
+    <aside
+      id="default-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-white"
+    >
+      <div class="overflow-y-auto py-5 px-3 h-full border-r border-white">
+        <a
+          href="supply360-index.html"
+          class="flex items-center uppercase tracking-supply360 p-2 text-2xl text-blazeOrange group button-hover"
+        >
+          <img
+            src="img/techmaster-logo.png"
+            alt="Favicon"
+            class="h-16 w-16 mr-2 border-r-2 border-blazeOrange"
+          />
+          <span class="ml-1 font-extrabold">Tech Master</span>
+        </a>
+        <ul class="pt-5 mt-5 space-y-2 border-t border-blazeOrange">
+          <li>
+            <a
+              href="techmaster-index.html"
+              class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-blazeOrange transition duration-75"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+
+              <span class="ml-3">Início</span>
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    </aside>
+    <div
+      id="content-wrapper"
+      class="flex-1 p-6 ml-0 lg:ml-64 transition-margin duration-300 ease-in-out"
+    >
+      <main class="flex-1 p-6">
+        <section>
+          <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+              <h2 class="mb-4 p-4 text-4xl tracking-supply360 uppercase font-extrabold text-blazeOrange bg-white shadow-lg rounded-lg ">
+                Nossas empresas
+              </h2>
+            </div>
+            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+              <!-- Card 1 -->
+              <div class="bg-white rounded-lg shadow-lg border-4 border-blazeOrange modal-hover ">
+                <div class="p-5 text-center ">
+                  <h3 class="text-xl font-bold tracking-supply360 text-blazeOrange">
+                    Empresa 1
+                  </h3>
+                  <span class="text-blazeOrange">nome do que faz</span>
+                </div>
+                <a href="filipe-thiago.html">
+                  <img class=" rounded-lg" src="img" alt="Líder"/>
+                </a>
+                <div class="p-5 text-center">
+                  <p class="mt-3 mb-4 font-light text-nickel">
+                    Descrição                  </p>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="bg-white rounded-lg shadow-lg border-4 border-blazeOrange modal-hover">
+                <div class="p-5 text-center">
+                  <h3 class="text-xl font-bold tracking-supply360 text-blazeOrange">
+                    Empresa 2
+                  </h3>
+                  <span class="text-blazeOrange">nome do que faz</span>
+                </div>
+                <a href="guilherme-prim.html">
+                  <img class="w-full rounded-lg" src="img/" alt="Marketing"/>
+                </a>p
+                <div class="p-5 text-center">
+                  <p class="mt-3 mb-4 font-light text-nickel">
+                    Descrição                  </p>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="bg-white rounded-lg shadow-lg border-4 border-blazeOrange modal-hover">
+                <div class="p-5 text-center">
+                  <h3 class="text-xl font-bold tracking-supply360 text-blazeOrange">
+                    Empresa 3
+                  </h3>
+                  <span class="text-blazeOrange">nome do que faz</span>
+                </div>
+                <a href="luis-ciatte.html">
+                  <img class="w-full rounded-lg" src="img/" alt="Front-end"/>
+                </a>
+                <div class="p-5 text-center">
+                  <p class="mt-3 mb-4 font-light text-nickel">
+                    Descrição.
+                  </p>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="bg-white rounded-lg shadow-lg border-4 border-blazeOrange modal-hover">
+                <div class="p-5 text-center">
+                  <h3 class="text-xl font-bold tracking-supply360 text-blazeOrange">
+                    Empresa 4
+                  </h3>
+                  <span class="text-blazeOrange">nome do que faz</span>
+                </div>
+                <a href="bruno-pedron.html">
+                  <img class="w-full rounded-lg" src="img/" alt="Back-end"/>
+                </a>
+                <div class="p-5 text-center">
+                  <p class="mt-3 mb-4 font-light text-nickel">
+                    Descrição.
+                  </p>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="bg-white rounded-lg shadow-lg border-4 border-blazeOrange modal-hover">
+                <div class="p-5 text-center">
+                  <h3 class="text-xl font-bold tracking-supply360 text-blazeOrange">
+                    Empresa 5
+                  </h3>
+                  <span class="text-blazeOrange">nome do que faz</span>
+                </div>
+                <a href="vitorio-ernesto.html">
+                  <img class="w-full rounded-lg" src="img/" alt="Banco de dados"/>
+                </a>
+                <div class="p-5 text-center">
+                  <p class="mt-3 mb-4 font-light text-nickel">
+                    Descrição.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        
+        <section
+          id="sobre"
+          class="bg-white border-4 rounded border-blazeOrange "
+        >
+          <div
+            class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 "
+          >
+            <div class="font-light text-nickel sm:text-lg">
+              <h2
+                class="mb-4 text-4xl tracking-supply360 font-extrabold uppercase text-blazeOrange"
+              >
+                Sobre nós
+              </h2>
+              <p class="mb-4">
+                A Tech Masters é uma empresa especializada em desenvolvimento de soluções tecnológicas inovadoras. Nossa equipe é composta por profissionais experientes e apaixonados por tecnologia, comprometidos em entregar soluções de alta qualidade para nossos clientes.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <img
+                class="w-full rounded-lg border-4 border-blazeOrange"
+                src="img/"
+                alt="office content 1"
+              />
+              <img
+                class="mt-4 w-64 lg:mt-10 rounded-lg border-4 border-blazeOrange"
+                src="img/"
+                alt="office content 2"
+              />
+            </div>
+          </div>
+        </section>
+       
+        <section class="bg-blazeOrange rounded my-4">
+          <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="max-w-screen-lg text-white sm:text-lg">
+              <h2
+                class="mb-4 text-4xl tracking-supply360 font-extrabold text-white uppercase "
+              >
+                Nossa Missão
+              </h2>
+              <p class="mb-4 font-light modal-hover">
+                Nossa missão é entregar soluções tecnológicas inovadoras que atendam às necessidades específicas de nossos clientes, ajudando-os a alcançar seus objetivos e melhorar sua competitividade no mercado.
+              </p>
+            </div>
+          </div>
+        </section>
+        
+        <section class="bg-blazeOrange rounded my-4">
+          <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="max-w-screen-lg text-white sm:text-lg">
+              <h2
+                class="mb-4 text-4xl tracking-supply360 font-extrabold text-white uppercase "
+              >
+                Nossos valores
+              </h2>
+              <p class="mb-4 font-light modal-hover">
+                Nossa empresa se baseia em valores fundamentais, como a inovação, a qualidade, a confiabilidade e a satisfação do cliente. Estamos comprometidos em entregar soluções que atendam às necessidades de nossos clientes e que sejam alinhadas com nossos valores.              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="bg-white rounded-lg shadow m-4">
+        <div
+          class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+        >
+          <span class="text-sm text-blazeOrange sm:text-center"
+            >Copyright &copy; 2024 | Tech Masters
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm font-medium text-blazeOrange sm:mt-0 modal-hover"
+          >
+            <li>
+              <a href="#sobre" class="hover:underline me-4 md:me-6">Sobre</a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/clothessupply360/"
+                class="hover:underline"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="js/supply360.js"></script>
+  </body>
+</html>

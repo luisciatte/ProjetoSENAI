@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Titulo da página -->
     <title>Início | supply360 | Tech Master</title>
+
+    <!-- Icone Principal da página -->
     <link
       rel="icon"
       href="img/supply360-favicon.ico"
       type="image/x-icon"
       sizes="16x16"
     />
+    <!-- CSS da suply360 -->
     <link rel="stylesheet" href="css/supply360.css" />
   </head>
 
   <body class="flex flex-col min-h-screen bg-orchidBlossom font-poppins">
+    <!-- Botão para abrir a sidebar no modo mobile --> 
     <button
       data-drawer-target="default-sidebar"
       data-drawer-toggle="default-sidebar"
@@ -34,15 +40,19 @@
         ></path>
       </svg>
     </button>
+
+       <!-- Sidebar fixa para navegação -->
     <aside
       id="default-sidebar"
       class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-white"
     >
       <div class="overflow-y-auto py-5 px-3 h-full border-r border-white">
+         <!-- Botão para ir para página principal -->
         <a
           href="supply360-index.html"
           class="flex items-center uppercase tracking-supply360 p-2 text-2xl text-blazeOrange group button-hover"
         >
+         <!-- Logo do projeto -->
           <img
             src="img/supply360-favicon.ico"
             alt="Favicon"
@@ -52,6 +62,9 @@
         </a>
         <ul class="pt-5 mt-5 space-y-2 border-t border-blazeOrange">
           <li>
+                   <!-- Links de navegação da sidebar -->
+
+            <!-- Página Inicial -->
             <a
               href="supply360-index.html"
               class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
@@ -75,6 +88,7 @@
             </a>
           </li>
           <li>
+            <!-- Página Produto -->
             <a
               href="supply360-produto.html"
               class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
@@ -98,6 +112,7 @@
             </a>
           </li>
           <li>
+            <!-- Página Pedido -->
             <a
               href="supply360-pedido.html"
               class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
@@ -121,6 +136,7 @@
             </a>
           </li>
           <li>
+             <!-- Página Estatísticas -->
             <a
               href="supply360-estatisticas.html"
               class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
@@ -144,6 +160,7 @@
             </a>
           </li>
           <li>
+              <!-- Página Estoque -->
             <a
               href="supply360-estoque.html"
               class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
@@ -151,8 +168,6 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blazeOrange transition duration-75">
               <path stroke-linecap="round" stroke-linejoin="round" d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
             </svg>
-            
-
               <span class="ml-3">Estoque</span>
             </a>
           </li>
@@ -164,6 +179,7 @@
       class="flex-1 p-6 ml-0 lg:ml-64 transition-margin duration-300 ease-in-out"
     >
       <main class="flex-1 p-6">
+        <!-- Section Com Informação Sobre nós -->
         <section
           id="sobre"
           class="bg-white border-4 rounded border-blazeOrange "
@@ -202,6 +218,7 @@
             </div>
           </div>
         </section>
+        <!-- Section Com Informação das Linguagens Utilizadas -->
         <section>
           <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 lg:mb-16 modal-hover">
@@ -323,6 +340,7 @@
             </div>
           </div>
         </section>
+        <!-- Section Com Informação de Nossos Objetivos -->
         <section class="bg-blazeOrange rounded">
           <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="max-w-screen-lg text-white sm:text-lg">
@@ -345,6 +363,7 @@
             </div>
           </div>
         </section>
+        <!-- Section Com Informação de Nosso Time -->
         <section>
           <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
@@ -355,6 +374,7 @@
               </h2>
             </div>
             <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-3">
+              <!-- Filipe -->
               <div
                 class="items-center bg-white rounded-lg shadow-lg sm:flex border-4 border-blazeOrange modal-hover"
               >
@@ -376,6 +396,7 @@
                   </p>
                 </div>
               </div>
+              <!-- Guilherme -->
               <div
                 class="items-center bg-white rounded-lg shadow-lg sm:flex border-4 border-blazeOrange modal-hover"
               >
@@ -397,6 +418,7 @@
                   </p>
                 </div>
               </div>
+              <!-- Luis -->
               <div
                 class="items-center bg-white rounded-lg shadow-lg sm:flex border-4 border-blazeOrange modal-hover"
               >
@@ -418,6 +440,7 @@
                   </p>
                 </div>
               </div>
+              <!-- Bruno -->
               <div
                 class="items-center bg-white rounded-lg shadow-lg sm:flex border-4 border-blazeOrange modal-hover"
               >
@@ -439,6 +462,7 @@
                   </p>
                 </div>
               </div>
+              <!-- Vitorio -->
               <div
                 class="items-center bg-white rounded-lg shadow-lg sm:flex border-4 border-blazeOrange modal-hover"
               >
@@ -464,6 +488,7 @@
             </div>
           </div>
         </section>
+        <!-- Section Com Informação de Nossos Valores -->
         <section class="bg-blazeOrange rounded">
           <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="max-w-screen-lg text-white sm:text-lg">
@@ -504,6 +529,8 @@
           </div>
         </section>
       </main>
+
+      <!-- Footer com as informações da supply360 -->
       <footer class="bg-white rounded-lg shadow m-4">
         <div
           class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"

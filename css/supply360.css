@@ -1522,3 +1522,15 @@ textarea {
   width: 100%;
   height: auto;
 }
+
+.size-24{
+  width: 6rem; /* 96px */
+  height: 6rem; /* 96px */
+}
+.my-4{
+  margin-top: 1rem; /* 16px */
+  margin-bottom: 1rem; /* 16px */
+}
+.border-r-2 {
+  border-right-width: 2px;
+}
