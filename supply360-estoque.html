@@ -176,108 +176,152 @@
     </aside>
 
     <div id="content-wrapper" class="flex-1 p-6 ml-0 lg:ml-64 transition-margin duration-300 ease-in-out">
-        <main class="flex-1 p-6">
-            <section class="p-3 sm:p-5 antialiased pulse section-">
-                <div class="mx-auto max-w-screen-xl px-4 lg:px-12 relative">
-                    <div class="bg-white relative shadow-md sm:rounded-lg overflow-y-auto">
-                        <div
-                            class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
-                            <div class="w-full md:w-1/2 modal-hover">
-                                <form class="flex items-center">
-                                    <label for="simple-search" class="sr-only">Pesquisar</label>
-
-                                    <div class="relative w-full">
-                                        <div
-                                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                            <svg class="w-5 h-5 text-blazeOrange" fill="currentColor"
-                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <input type="text" id="simple-search"
-                                            class="bg-white border border-blazeOrange text-blazeOrange placeholder-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full pl-10 p-2"
-                                            placeholder="Pesquisar" required="">
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div
-                                class="pulse-on-hover w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                                <button type="button" id="createProductModalButton"
-                                    data-modal-target="createProductModal" data-modal-toggle="createProductModal"
-                                    class="flex items-center justify-center text-white bg-blazeOrange hover:bg-white hover:text-blazeOrange border border-blazeOrange focus:ring-4 focus:ring-blazeOrange font-medium rounded-lg text-sm px-4 py-2 focus:outline-none">
-                                    <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path clip-rule="evenodd" fill-rule="evenodd"
-                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-                                    </svg>
-                                    Adicionar quantidade de produto
-                                </button>
-                            </div>
-
-                            <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown"
-                                class=" modal-hover w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-blazeOrange focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-                                type="button">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                                    class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Filter
-                                <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path clip-rule="evenodd" fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                                </svg>
-                            </button>
-
-
-                            <div id="filterDropdown" class="z-10 hidden w-56 p-3 bg-white rounded-lg shadow modal-hover">
-                                <h6 class="mb-3 text-sm font-medium text-blazeOrange ">Category</h6>
-                                <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
-                                    <li class="flex items-center">
-                                        <input id="apple" type="checkbox" value=""
-                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 ">
-                                        <label for="apple" class="ml-2 text-sm font-medium text-gray-900 ml-3">Apple
-                                            (56)</label>
-                                    </li>
-                                </ul>
-                            </div>
- 
-                        </div>
-                        <div class="overflow-y-auto ">
-                            <table class="w-full text-sm text-left text-blazeOrange">
-                                <thead class="text-xs text-blazeOrange uppercase bg-white">
-                                    <tr>
-                                        <th scope="col" class="px-4 py-3">ID</th>
-                                        <th scope="col" class="px-4 py-3">Quantidade</th>
-                                        <th scope="col" class="px-4 py-3"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-b">
-                                        <th scope="row"
-                                            class="px-4 py-3 font-medium text-blazeOrange whitespace-nowrap">ID
-                                        </th>
-                                        <td class="px-4 py-3">Quantidade</td>
-                                        
-
-                                        <td class="px-4 py-3 relative">
-                                            <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                                                class="pulse-on-hover items-center text-sm font-medium hover:bg-blazeOrange p-1.5 text-center text-blazeOrange  rounded-lg focus:outline-none">
-                                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d=" M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                </svg>
-                                            </button>
-                                            <div id="dropdown" tabindex="-1"
-                                                class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
-                                                <div
-                                                    class="relative p-4 w-full max-w-md mx-auto bg-white rounded-lg shadow-lg">
+      <!-- Contêiner principal do conteúdo, ajusta a margem com base no tamanho da tela -->
+  
+      <main class="flex-1 p-6">
+          <!-- Seção principal com preenchimento -->
+  
+          <section class="p-3 sm:p-5 antialiased pulse section-">
+              <!-- Seção com preenchimento responsivo e alguns estilos personalizados -->
+  
+              <div class="mx-auto max-w-screen-xl px-4 lg:px-12 relative">
+                  <!-- Contêiner com largura máxima responsiva e preenchimento -->
+  
+                  <div class="bg-white relative shadow-md sm:rounded-lg overflow-y-auto">
+                      <!-- Cartão com fundo branco, sombra e bordas arredondadas -->
+  
+                      <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+                          <!-- Contêiner para o formulário e botões com layout responsivo -->
+  
+                          <div class="w-full md:w-1/2 modal-hover">
+                              <!-- Contêiner do formulário com largura responsiva -->
+  
+                              <form class="flex items-center">
+                                  <!-- Formulário de pesquisa -->
+  
+                                  <label for="simple-search" class="sr-only">Pesquisar</label>
+                                  <!-- Rótulo oculto para acessibilidade -->
+  
+                                  <div class="relative w-full">
+                                      <!-- Contêiner relativo para o campo de entrada -->
+  
+                                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                          <!-- Contêiner do ícone dentro do campo de entrada -->
+  
+                                          <svg class="w-5 h-5 text-blazeOrange" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                              <!-- Ícone de pesquisa em SVG -->
+  
+                                              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                          </svg>
+                                      </div>
+  
+                                      <input type="text" id="simple-search" class="bg-white border border-blazeOrange text-blazeOrange placeholder-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full pl-10 p-2" placeholder="Pesquisar" required="">
+                                      <!-- Campo de entrada de pesquisa com estilos e espaço reservado -->
+                                  </div>
+                              </form>
+                          </div>
+  
+                          <div class="pulse-on-hover w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                              <!-- Contêiner dos botões com layout responsivo -->
+  
+                              <button type="button" id="createProductModalButton" data-modal-target="createProductModal" data-modal-toggle="createProductModal" class="flex items-center justify-center text-white bg-blazeOrange hover:bg-white hover:text-blazeOrange border border-blazeOrange focus:ring-4 focus:ring-blazeOrange font-medium rounded-lg text-sm px-4 py-2 focus:outline-none">
+                                  <!-- Botão para abrir o modal de adicionar quantidade de produto -->
+  
+                                  <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                      <!-- Ícone de adicionar em SVG -->
+  
+                                      <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                                  </svg>
+                                  Adicionar quantidade de produto
+                              </button>
+                          </div>
+  
+                          <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="modal-hover w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-blazeOrange focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200" type="button">
+                              <!-- Botão para alternar o menu suspenso de filtros -->
+  
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
+                                  <!-- Ícone de filtro em SVG -->
+  
+                                  <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
+                              </svg>
+  
+                              Filter
+                              <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                  <!-- Ícone da seta para baixo em SVG -->
+  
+                                  <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                              </svg>
+                          </button>
+  
+                          <div id="filterDropdown" class="z-10 hidden w-56 p-3 bg-white rounded-lg shadow modal-hover">
+                              <!-- Menu suspenso de filtros -->
+  
+                              <h6 class="mb-3 text-sm font-medium text-blazeOrange ">Category</h6>
+                              <!-- Cabeçalho do menu suspenso -->
+  
+                              <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
+                                  <!-- Lista do menu suspenso -->
+  
+                                  <li class="flex items-center">
+                                      <!-- Item da lista -->
+  
+                                      <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 ">
+                                      <!-- Caixa de seleção -->
+  
+                                      <label for="apple" class="ml-2 text-sm font-medium text-gray-900 ml-3">Apple (56)</label>
+                                      <!-- Rótulo da caixa de seleção -->
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+  
+                      <div class="overflow-y-auto">
+                          <!-- Contêiner para a tabela com tratamento de overflow -->
+  
+                          <table class="w-full text-sm text-left text-blazeOrange">
+                              <!-- Tabela com largura total e estilos de texto -->
+  
+                              <thead class="text-xs text-blazeOrange uppercase bg-white">
+                                  <!-- Cabeçalho da tabela -->
+  
+                                  <tr>
+                                      <th scope="col" class="px-4 py-3">ID</th>
+                                      <th scope="col" class="px-4 py-3">Quantidade</th>
+                                      <th scope="col" class="px-4 py-3"></th>
+                                  </tr>
+                              </thead>
+  
+                              <tbody>
+                                  <!-- Corpo da tabela -->
+  
+                                  <tr class="border-b">
+                                      <!-- Linha da tabela -->
+  
+                                      <th scope="row" class="px-4 py-3 font-medium text-blazeOrange whitespace-nowrap">ID</th>
+                                      <!-- Célula da tabela para ID -->
+  
+                                      <td class="px-4 py-3">Quantidade</td>
+                                      <!-- Célula da tabela para Quantidade -->
+  
+                                      <td class="px-4 py-3 relative">
+                                          <!-- Célula da tabela para ações -->
+  
+                                          <button id="dropdown-button" data-dropdown-toggle="dropdown" class="pulse-on-hover items-center text-sm font-medium hover:bg-blazeOrange p-1.5 text-center text-blazeOrange rounded-lg focus:outline-none">
+                                              <!-- Botão para abrir o menu suspenso de ações -->
+  
+                                              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                  <!-- Ícone de ações em SVG -->
+  
+                                                  <path d=" M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                              </svg>
+                                          </button>
+  
+                                          <div id="dropdown" tabindex="-1" class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
+                                              <!-- Menu suspenso para ações -->
+  
+                                              <div class="relative p-4 w-full max-w-md mx-auto bg-white rounded-lg shadow-lg">
+                                                  <!-- Conteúdo do menu suspenso -->
+  
                                                     <button type="button" class="text-blazeOrange bg-transparent rounded-lg text-sm p-1.5 inline-flex items-center ml-auto dropdown-button"                                                    data-modal-target="dropdown" data-modal-toggle="dropdown">
                                                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"  clip-rule="evenodd" />
@@ -326,7 +370,7 @@
                 </div>
             </section>
             
-             <!-- Modal para cirar o produto -->
+             <!-- Modal para criar o produto -->
             <div id="createProductModal" tabindex="-1"
             class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
                 <div class="relative p-4 w-full max-w-2xl bg-white rounded-lg shadow-lg modal-content">
